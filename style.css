@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.snow{
+    width: 0.5px;
+    height: 110px;
+    background-color: honeydew;
+    margin: 3px;
+    position: absolute;
+}
+
+
+
+@keyframes comeSnow {
+    from{
+        transform: translateY(-600%);
+    }
+    to{
+        transform: translateY(600%);
+    }
+}
+
+.road{
+    width: 450px;
+    height: 150px;
+    /* background-image: url(images/reoad.jpg); */
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    z-index: 55;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.car{
+    width: 350px;
+    position: relative;
+    z-index: 555;
+}
+.car_place{
+    width: 250px;
+    height: auto;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 555;
+    transform: translateX(-50%);
+    animation: 4.3s shake infinite alternate linear;
+}
+
+.light1{
+    width: 30%;
+    opacity: 0;
+    position: absolute;
+    left: 12%;
+    top: 7%;
+    transform: rotate(25deg);
+    z-index: 5555;
+    animation: .5s opac infinite alternate;
+}
+
+.red1{
+    width: 20%;
+    opacity: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 18%;
+    z-index: 555;
+    animation: .5s opac infinite alternate;
+}
+
+.red2{
+    width: 20%;
+    opacity: 0;
+    position: absolute;
+    bottom: 1.5%;
+    left: 22.5%;
+    z-index: 555;
+    animation: .5s opac infinite alternate;
+}
+
+.red3{
+    width: 20%;
+    opacity: 0;
+    position: absolute;
+    bottom: 2%;
+    right: 20%;
+    z-index: 555;
+    animation: .5s opac infinite alternate;
+}
+
+.red4{
+    width: 20%;
+    opacity: 0;
+    position: absolute;
+    bottom: 1.5%;
+    right: 24%;
+    z-index: 555;
+    animation: .5s opac infinite alternate;
+}
+
+.light2{
+    width: 30%;
+    opacity: 0;
+    position: absolute;
+    right: 12%;
+    top: 7%;
+    transform: rotate(-25deg);
+    z-index: 5555;
+    animation: .5s opac infinite alternate;
+}
+
+.shine1{
+    width: 80%;
+    transform: rotate(90deg);
+    position: absolute;
+    animation: .5s opac infinite alternate;
+    left: -4%;
+    opacity: 0;
+    z-index: 555;
+    top: 16%;
+    transform: translateY(-100%) rotate(90deg);
+    filter: drop-shadow(0 10px 40px white);
+}
+
+.shine2{
+    width: 80%;
+    transform: rotate(90deg);
+    position: absolute;
+    filter: drop-shadow(0 10px 40px white);
+    animation: .5s opac infinite alternate;
+    right: -16%;
+    opacity: 0;
+    z-index: 555;
+    top: 16%;
+    transform: translateY(-100%) rotate(90deg);
+}
+
+.luys{
+    width: 100%;
+    height: 20%;
+    z-index: 55;
+    position: absolute;
+    background: transparent;
+    top: 0;
+}
+
+
+.yellow1{
+    width: 10%;
+    position: absolute;
+    left: 21%;
+    z-index: 4450;
+    top: 30%;
+    animation: .5s opac infinite alternate;
+}
+
+.yellow2{
+    width: 10%;
+    position: absolute;
+    right: 21%;
+    z-index: 4450;
+    top: 30%;
+    animation: .5s opac infinite alternate;
+}
+
+@keyframes opac{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes shake{
+    from{
+        transform:translateX(-50%) translateY(-150%);
+    }
+    to{
+        transform:translateX(-50%) translateY(30%);
+    }
+}
